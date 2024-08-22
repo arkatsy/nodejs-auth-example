@@ -1,6 +1,6 @@
 ### Example of a simple session authentation with Node.js
 
-Install deps with `npm i` (will install the deps for both client and server workspaces).
+Install deps with `npm i` (will install the deps for both client and server workspaces automatically).
 
 Then `npm run dev`:
 
