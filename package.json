@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "server": "npm run dev -w server",
+    "client": "npm run dev -w client",
+    "dev": "concurrently -p \"[{name}]\" -n \"server,client\" -c \"blue.bold,magenta.bold\" \"npm run server\" \"npm run client\"",
+    "prod": "concurrently \"npm run prod -w server\" \"npm run prod -w client\""
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
