@@ -375,8 +375,7 @@ app.get('/sauce', (req, res) => {
 
   // Now we can look up the user in the database with the session token.
   const authenticatedUser = db.prepare('SELECT * FROM User WHERE session_token = ?').get(sessionToken);
-  console.log(authenticatedUser);
-
+  
   if (!authenticatedUser) {
     logger.info('Unauthorized access to /sauce');
     return res.status(401).send({ message: 'Unauthorized' });
