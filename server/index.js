@@ -61,7 +61,8 @@ if (IS_PROD && !ORIGIN) {
   throw new Error(errorMessage);
 }
 
-// Just for fun: if the "db" directory doesn't exist (where you store the db files) we create it.
+// If the "db" directory doesn't exist (where you store the db files) we create it.
+// This is because we don't push the .db files to the repository, and git doesn't upload empty directories, so if you clone this, you probably can't see any 'db' folder until the server runs for the first time
 // Also if we are in development mode and the database file exists, we delete it to reset the database.
 // See how based on how because of how the DB_PATH is setup, we can easily refer to the db file by just using the DB_PATH variable.
 // The DB_PATH variable will point to the correct file based on the environment we are in.
